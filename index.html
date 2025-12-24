@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎅 Santa Tracker (NORAD)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #00111f, #002b4d);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    p {
+      opacity: 0.9;
+    }
+
+    .tracker-container {
+      width: 100%;
+      height: 80vh;
+      border-top: 2px solid rgba(255,255,255,0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: black;
+    }
+
+    .fallback {
+      margin: 20px;
+    }
+
+    .fallback a {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #ff2a2a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .fallback a:hover {
+      background: #ff5555;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 10px;
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🎅 NORAD Santa Tracker</h1>
+    <p>Tracking Santa Claus around the world in real time</p>
+  </header>
+
+  <div class="tracker-container">
+    <iframe
+      src="https://www.noradsanta.org/en/map"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    ></iframe>
+  </div>
+
+  <div class="fallback">
+    <p>If the tracker doesn’t load, click below to open the official NORAD site:</p>
+    <a href="https://www.noradsanta.org/" target="_blank">
+      Open NORAD Santa Tracker 🎄
+    </a>
+  </div>
+
+  <footer>
+    Official data provided by NORAD • This page is not affiliated with NORAD
+  </footer>
+</body>
+</html>
